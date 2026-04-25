@@ -29,6 +29,16 @@ This project is intentionally separate from `clawz`. Its goal is to let one Zeko
 
 It now carries signed payment authorization payloads, can submit signed Zeko GraphQL payment/zkApp commands, and can either call an external HTTP facilitator or relay EVM settlement itself for Base/Ethereum USDC. The remaining app-specific piece is the actual zkApp contract call body for your Zeko settlement contract.
 
+## Status
+
+This repo is intentionally narrow in scope today:
+
+- implemented here: Zeko testnet settlement, Base mainnet USDC, Ethereum mainnet USDC
+- deployment-ready here: self-hosted EVM facilitator and Zeko settlement/witness flows
+- not implemented here yet: Solana and other non-EVM hosted x402 rails
+
+That keeps the package honest about what is production-usable right now versus what is still future work.
+
 ## Files
 
 - `src/protocol.js`: shared x402 header, asset, and payload helpers
@@ -191,7 +201,7 @@ import {
   buildZekoExactSettlementIntent,
   buildZekoSettlementContractRail,
   verifyPayment
-} from "./src/index.js";
+} from "zeko-x402";
 
 const context = {
   serviceId: "zeko-proof-service",

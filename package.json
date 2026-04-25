@@ -3,6 +3,24 @@
   "version": "0.1.0",
   "description": "Multi-rail x402 settlement toolkit for Zeko, Base, and Ethereum.",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeko-labs/x402-zeko.git"
+  },
+  "homepage": "https://github.com/zeko-labs/x402-zeko#readme",
+  "bugs": {
+    "url": "https://github.com/zeko-labs/x402-zeko/issues"
+  },
+  "keywords": [
+    "x402",
+    "zeko",
+    "mina",
+    "base",
+    "ethereum",
+    "usdc",
+    "payments",
+    "zk"
+  ],
   "type": "module",
   "main": "./src/index.js",
   "exports": {
